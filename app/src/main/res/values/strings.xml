@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">City Guide</string>
+    <string name="logo_name">Get A Way</string>
+    <string name="slogan_name">We will help you to find your way!</string>
+
+    <!-- strings for onboarding screen -->
+
+    <!-- Titles -->
+    <string name="first_slide_title">Search Your Location</string>
+    <string name="second_slide_title">Make A Call</string>
+    <string name="third_slide_title">Add Missing Place</string>
+    <string name="fourth_slide_title">Sit Back And Enjoy</string>
+
+    <!-- Description -->
+    <string name="first_slide_desctiption">Hii where do you want to go. We can move together. Hii where do you want to go. We can move together.</string>
+    <string name="second_slide_desctiption">Hii where do you want to go. We can move together. Hii where do you want to go. We can move together.</string>
+    <string name="third_slide_desctiption">Hii where do you want to go. We can move together. Hii where do you want to go. We can move together.</string>
+    <string name="fourth_slide_desctiption">Hii where do you want to go. We can move together. Hii where do you want to go. We can move together.</string>
+
+    <!-- Buttons -->
+    <string name="skip_button">Skip</string>
+    <string name="next_button">Next</string>
+    <string name="get_started_button">Lets Get Started</string>
+
+    <!-- All categories menu names -->
+    <string name="expand_all">Expand All</string>
+    <string name="car_rent">Car Rent</string>
+    <string name="all_shops">All Shops</string>
+
+    <!-- General Strings -->
+    <string name="home">HOME</string>
+    <string name="search">SEARCH</string>
+    <string name="all_categories">ALL CATEGORIES</string>
+    <string name="profile">Profile</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="logout">Logout</string>
+    <string name="retailer_heading">Grow\nYour Business</string>
+    <string name="retailer_tag_line">We will help you to grow your business using online services.</string>
+    <string name="create_account">Create\nAccount</string>
+    <string name="how_we_work">How we work ?</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="forget_password">Forget Password</string>
+
+</resources>

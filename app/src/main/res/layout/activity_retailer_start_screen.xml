@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Common.LoginSignup.RetailerStartScreen"
+    android:background="@color/white"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/splash_screen_background"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/muli_black"
+            android:gravity="center"
+            android:text="@string/retailer_heading"
+            android:textColor="@color/black"
+            android:textSize="36sp"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/retailer_tag_line"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp">
+
+            <Button
+                android:id="@+id/login_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="4dp"
+                android:text="@string/login"
+                android:textColor="@color/black"
+                android:background="@color/colorPrimary"
+                android:onClick="callLoginScreen"
+                android:transitionName="transition_login"
+                />
+
+            <Button
+                android:id="@+id/signup_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="4dp"
+                android:text="@string/sign_up"
+                android:textColor="@color/black"
+                android:onClick="callSignupScreen"
+                android:transitionName="transition_signup"
+                android:background="@color/colorPrimary"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:text="@string/how_we_work"
+            android:textColor="@color/black"
+            android:background="#00000000"
+            />
+
+    </LinearLayout>
+
+</ScrollView>
