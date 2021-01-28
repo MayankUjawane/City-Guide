@@ -11,13 +11,16 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.cityguide.Databases.UserData;
 import com.example.cityguide.R;
+import com.google.android.material.textfield.TextInputEditText;
 
 public class Signup extends AppCompatActivity {
 
     ImageView backButton;
     Button next, login;
     TextView titleText;
+    TextInputEditText userNameText, passwordText, emailText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +31,19 @@ public class Signup extends AppCompatActivity {
         next = findViewById(R.id.signup_next_btn);
         login = findViewById(R.id.signup_login_btn);
         titleText = findViewById(R.id.signup_title_text);
+
+        userNameText = findViewById(R.id.signup_user_name);
+        passwordText = findViewById(R.id.signup_password);
+        emailText = findViewById(R.id.signup_email);
+
     }
 
     public void callNextSignupScreen(View view) {
 
         Intent intent = new Intent(this, SignupSecondActivity.class);
+        intent.putExtra("userName", userNameText.getText().toString());
+        intent.putExtra("password", passwordText.getText().toString());
+        intent.putExtra("email", emailText.getText().toString());
 
         // Add Transition
         Pair[] pairs = new Pair[4];

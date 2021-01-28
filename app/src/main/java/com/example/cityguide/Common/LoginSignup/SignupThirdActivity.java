@@ -9,9 +9,11 @@ import android.util.Log;
 import android.util.Pair;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.cityguide.Databases.UserData;
 import com.example.cityguide.R;
 import com.google.android.material.textfield.TextInputLayout;
 import com.hbb20.CountryCodePicker;
@@ -38,33 +40,26 @@ public class SignupThirdActivity extends AppCompatActivity {
         } */
 
         // Get all values passed from previous screens using intent
-        /*
-        String fullName = getIntent().getStringExtra("fullName");
-        String email = getIntent().getStringExtra("eamil");
+        String email = getIntent().getStringExtra("email");
         String userName = getIntent().getStringExtra("username");
         String password = getIntent().getStringExtra("password");
         String date = getIntent().getStringExtra("date");
         String gender = getIntent().getStringExtra("gender");
 
-         */
 
         String userEnteredPhoneNumber = phoneNumberText.getEditText().getText().toString().trim(); //Get Phone Number
-        String phoneNumber = "+" + countryCodePicker.getFullNumber() + userEnteredPhoneNumber;
-        Log.d("phone", "callVerifyOTPScreen: "+ phoneNumber);
+        String phoneNumber = "+"+ countryCodePicker.getSelectedCountryCode() + userEnteredPhoneNumber;
 
         Intent intent = new Intent(getApplicationContext(), VerifyOTP.class);
 
         //Passing all the fields to the next Activity
-        /*
-        intent.putExtra("fullName", fullName);
         intent.putExtra("email", email);
         intent.putExtra("userName", userName);
         intent.putExtra("password", password);
         intent.putExtra("date", date);
         intent.putExtra("gender", gender);
-         */
-
         intent.putExtra("phoneNumber", phoneNumber);
+
         startActivity(intent);
 
     }

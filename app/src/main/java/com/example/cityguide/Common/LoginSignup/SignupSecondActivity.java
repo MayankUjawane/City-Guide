@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Pair;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,6 +19,8 @@ public class SignupSecondActivity extends AppCompatActivity {
     ImageView backButton;
     Button next, login;
     TextView titleText;
+    String gender;
+    DatePicker picker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +31,31 @@ public class SignupSecondActivity extends AppCompatActivity {
         next = findViewById(R.id.signup_next_btn);
         login = findViewById(R.id.signup_login_btn);
         titleText = findViewById(R.id.signup_title_text);
+        picker = findViewById(R.id.date_picker);
+
+    }
+
+    public String getSelectedDate(){
+        StringBuilder builder=new StringBuilder();;
+        builder.append((picker.getMonth() + 1)+"/"); //month is 0 based i.e. 0 is January
+        builder.append(picker.getDayOfMonth()+"/");
+        builder.append(picker.getYear());
+        return builder.toString();
     }
 
     public void callNextSignupScreen(View view) {
 
+        String userName = getIntent().getStringExtra("userName");
+        String password = getIntent().getStringExtra("password");
+        String email = getIntent().getStringExtra("email");
+        String age = getSelectedDate();
+
         Intent intent = new Intent(this, SignupThirdActivity.class);
+        intent.putExtra("userName", userName);
+        intent.putExtra("password", password);
+        intent.putExtra("email", email);
+        intent.putExtra("gender", gender);
+        intent.putExtra("age", age);
 
         // Add Transition
         Pair[] pairs = new Pair[4];
@@ -51,4 +74,19 @@ public class SignupSecondActivity extends AppCompatActivity {
 
     }
 
+    public void radioButtonClicked(View view) {
+        switch (view.getId()){
+            case R.id.rb_male:
+                gender = "Male";
+                break;
+
+            case R.id.rb_female:
+                gender = "Female";
+                break;
+
+            case R.id.rb_other:
+                gender = "Other";
+                break;
+        }
+    }
 }

@@ -55,6 +55,8 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/rb_male"
+                    android:onClick="radioButtonClicked"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
@@ -62,6 +64,8 @@
                     android:layout_weight="1"/>
 
                 <RadioButton
+                    android:id="@+id/rb_female"
+                    android:onClick="radioButtonClicked"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
@@ -69,6 +73,8 @@
                     android:layout_weight="1"/>
 
                 <RadioButton
+                    android:id="@+id/rb_other"
+                    android:onClick="radioButtonClicked"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
@@ -92,6 +98,7 @@
                 android:textSize="22sp"/>
 
             <DatePicker
+                android:id="@+id/date_picker"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:datePickerMode="spinner"
