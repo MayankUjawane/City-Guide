@@ -29,7 +29,7 @@ public class VerifyOTP extends AppCompatActivity {
 
     PinView pin;
     String codeBySystem;
-    String fullName, email, userName, password, date, gender, phoneNumber;
+    String email, userName, password, date, gender, phoneNumber;
     UserData data;
 
     @Override
